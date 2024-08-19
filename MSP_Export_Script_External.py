@@ -128,7 +128,7 @@ def mb_view():
     time.sleep(0.15)
 
 #Switch to DT overview: alt + 09. 
-def scen2_view():
+def dt_view():
     time.sleep(0.15)
     pyautogui.keyDown("alt")
     pyautogui.press("0")
@@ -184,7 +184,7 @@ def take_screenshot(line_id, name, view_type):
                 tpt_view()
             else:
                 #Nested ternary to pick which view to select.
-                si_view() if (view_type == "Si") else (mb_view() if view_type == "MB" else scen2_view())
+                si_view() if (view_type == "Si") else (mb_view() if view_type == "MB" else dt_view())
             
             #Sort tasks by priority (in Project)
             #Go to view tab
